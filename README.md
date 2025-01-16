@@ -8,29 +8,34 @@ Assuming you have the following installed:
 - nix
 - direnv
 
-Create a new directory and create a file name `.envrc` that direnv with the following content:
+Create a new directory and create a file name `.envrc`. The file should contain the following:
 
 ```bash
 use flake .
 ```
 
-In the new directory run `direnv allow` to allow the directory to be used as a nix shell.
+Or run:
+```bash
+echo "use flake ." > .envrc
+```
 
-Copy one of the flake.nix files as a starting point to your project.
+In the new directory run `direnv allow`. This lets direnv know that the directory should be used as a nix shell.
 
-Enter back into your shell. Your shell should have acknwoledge the new flake and you should be able to use any of the packages found in that flake.nix file.
+Copy one of the `flake.nix` files as a starting point to your project.
 
-Eg:
+Enter back into your shell. Your shell should have acknwoledge the new flake and you should be able to use any of the packages found in that flake.nix.
+
+## Example
 Say you have python installed on your system.
 
-Outside of your flake directory:
+Outside of your directory with your flake:
 
 ```bash
 $ which python
 /usr/local/bin/python
 ```
 
-Inside your flake directory:
+Inside your directory with your flake:
 
 ```bash
 $ which python
