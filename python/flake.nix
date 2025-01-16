@@ -12,10 +12,7 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      # Specify all packages top-level here to make it easier to import them as
-      # a caller.  Mostly useful for debugging the flake.
       packages = {
-        # Pin to a minor version because why not.
         python3 = pkgs.python312;
         python3Packages = pkgs.python312Packages;
       };

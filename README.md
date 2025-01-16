@@ -1,7 +1,10 @@
 # Flakes
-My most common nix flakes
 
-Assuming you have installed:
+My common nix flakes.
+
+## How to use
+
+Assuming you have the following installed:
 - nix
 - direnv
 
